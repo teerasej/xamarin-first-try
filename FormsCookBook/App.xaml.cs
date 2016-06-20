@@ -7,32 +7,11 @@ namespace FormsCookBook
 	{
 		public App()
 		{
-			var userNameEntry = new Entry { Placeholder = "username" };
-			var passwordEntry = new Entry { Placeholder = "password", IsPassword = true };
-			var loginButton = new Button { Text = "Login" };
-
-			loginButton.Clicked += (sender, e) =>
-			{
-				Debug.WriteLine(string.Format("Username: {0} - Password: {1}", userNameEntry.Text, passwordEntry.Text));
-			};
-
-			MainPage = new ContentPage
-			{
-				Content = new StackLayout
-				{
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						userNameEntry,
-						passwordEntry,
-						loginButton
-					}
-				}
-			};
-
+			
 
 			//InitializeComponent();
 
-			//MainPage = new FormsCookBookPage();
+			MainPage = new MainPage();
 		}
 
 		protected override void OnStart()
